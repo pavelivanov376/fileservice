@@ -9,10 +9,11 @@ public class FileEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
+
     @Column(name = "type")
     private String type;
 
-    @Transient
+    @Column(name = "content")
     private byte[] content;
 
     @Column(name = "uuid", nullable = false, unique = true)
