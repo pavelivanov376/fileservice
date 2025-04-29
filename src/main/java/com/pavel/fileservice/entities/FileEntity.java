@@ -9,7 +9,6 @@ public class FileEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
-
     @Column(name = "type")
     private String type;
 
