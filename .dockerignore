@@ -1,0 +1,42 @@
+# === Build outputs ===
+target/
+*.jar
+*.war
+*.ear
+
+# === IDE & editor settings ===
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# === Git & version control ===
+.git/
+.gitignore
+
+# === Node / frontend stuff (if present) ===
+node_modules/
+dist/
+build/
+
+# === OS generated files ===
+.DS_Store
+Thumbs.db
+*.log
+
+# === Environment / secrets ===
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# === Docker itself ===
+Dockerfile*
+docker-compose*.yml
+
+# === Test and temp ===
+coverage/
+*.tmp
+*.bak

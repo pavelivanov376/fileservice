@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t fileservice:local .
+DOCKER_BUILDKIT=1 docker build -t fileservice:local .
