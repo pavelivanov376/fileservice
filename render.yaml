@@ -1,0 +1,27 @@
+# Env vars to be set in Render:
+#   - DATABASE_URL: jdbc:postgresql://ep-xxx.neon.tech/neondb?sslmode=require
+#   - DATABASE_USERNAME: neondb_owner
+#   - DATABASE_PASSWORD: <neon-password>
+#   - APP_SERVICE_TOKEN: token
+
+services:
+  - type: pserv
+    name: clouddrive-fileservice
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: PORT
+        value: 80
+      - key: APP_SERVICE_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: DB_SSLMODE
+        value: require
